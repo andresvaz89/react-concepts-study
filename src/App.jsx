@@ -5,6 +5,10 @@ import TabButton from './components/TabButton';
 import { CORE_CONCEPTS } from './data';
 
 function App() {
+  const handleSelect = () => {
+    console.log('Hola Mundo - selected');
+  };
+
   return (
     <div>
       <Header />
@@ -34,11 +38,12 @@ function App() {
         <section id="examples">
           <h2>Examples</h2>
           <menu>
-            <TabButton>Components</TabButton>
+            <TabButton onSelect={handleSelect}>Components</TabButton>
             <TabButton>JSX</TabButton>
             <TabButton>Props</TabButton>
             <TabButton>State</TabButton>
           </menu>
+          Dynamic Content
         </section>
       </main>
     </div>
